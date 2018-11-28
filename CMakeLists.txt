@@ -21,6 +21,7 @@ include_directories(Includes)
 include_directories(Libraries)
 include_directories(Libraries/googletest/googletest/include)
 include_directories(Libraries/Clara/include)
+include_directories(Libraries/pybind11/include)
 
 # Compile options
 include(Builds/CMake/CompileOptions.cmake)
@@ -51,6 +52,8 @@ add_subdirectory(Sources/hspp)
 add_subdirectory(Tests/UnitTests)
 add_subdirectory(Extensions/HSppConsole)
 add_subdirectory(Extensions/HSppTool)
+add_subdirectory(Libraries/pybind11)
+add_subdirectory(Sources/API/Python)
 
 if (NOT CMAKE_CXX_COMPILER_ID MATCHES "MSVC")
     include(CodeCoverage)
