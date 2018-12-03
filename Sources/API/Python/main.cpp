@@ -1,3 +1,5 @@
+#include <API/Python/Accounts/Account.hpp>
+
 #include <pybind11/pybind11.h>
 
 PYBIND11_MODULE(pyHearthstonepp, m)
@@ -6,4 +8,6 @@ PYBIND11_MODULE(pyHearthstonepp, m)
     R"pbdoc(
 			Hearthstone++
 		)pbdoc";
+
+    AddAccount(m);
 }
