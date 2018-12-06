@@ -149,7 +149,7 @@ void Player::AddHeroAndPower(Card&& heroCard, Card&& powerCard)
 
 void Player::AddHeroAndPowerWrapper(Card heroCard, Card powerCard)
 {
-    Player::AddHeroAndPower(std::move(heroCard), std::move(powerCard));
+    this->AddHeroAndPower(std::move(heroCard), std::move(powerCard));
 }
 
 void Player::FreeMemory()
