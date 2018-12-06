@@ -136,7 +136,9 @@ class Player
     //! \param powerCard A card that represents hero power.
     void AddHeroAndPower(Card&& heroCard, Card&& powerCard);
 
- private:
+    void AddHeroAndPowerWrapper(Card heroCard, Card powerCard);
+
+private:
     //! Releases dynamic allocated resources.
     void FreeMemory();
 

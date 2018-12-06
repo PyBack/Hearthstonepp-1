@@ -147,6 +147,11 @@ void Player::AddHeroAndPower(Card&& heroCard, Card&& powerCard)
     m_hero->heroPower = new HeroPower(powerCard);
 }
 
+void Player::AddHeroAndPowerWrapper(Card heroCard, Card powerCard)
+{
+    Player::AddHeroAndPower(std::move(heroCard), std::move(powerCard));
+}
+
 void Player::FreeMemory()
 {
     for (auto& card : m_deck)
