@@ -30,4 +30,11 @@ Entity* Generic::DrawCard(Player& player, Card&& card)
 
     return entity;
 }
+
+Entity* Generic::DrawCardWrapper(Player& player, Card& card) {
+    Entity* entity = Generic::DrawCard(player, std::move(card));
+
+    return entity;
+}
+
 }  // namespace Hearthstonepp
